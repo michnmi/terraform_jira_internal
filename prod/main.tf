@@ -42,8 +42,8 @@ resource "libvirt_volume" "jira" {
 resource "libvirt_domain" "jira" {
   provider  = libvirt.vmhost03
   name      = "jira-${var.env}"
-  memory    = "1664"
-  vcpu      = 2
+  memory    = "4096"
+  vcpu      = 4
   autostart = true
 
   // The MAC here is given an IP through mikrotik
