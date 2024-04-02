@@ -42,7 +42,7 @@ resource "libvirt_volume" "jira" {
 resource "libvirt_domain" "jira" {
   provider  = libvirt.vmhost03
   name      = "jira-${var.env}"
-  memory    = "4096"
+  memory    = "8192"
   vcpu      = 4
   autostart = true
 
